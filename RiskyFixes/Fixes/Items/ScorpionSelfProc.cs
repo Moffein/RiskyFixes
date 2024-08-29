@@ -11,7 +11,7 @@ namespace RiskyFixes.Fixes.Items
     {
         public override string ConfigCategoryString => "Items";
 
-        public override string ConfigOptionName => "Symbiotic Scorpion Self Proc";
+        public override string ConfigOptionName => "(Server-Side) Symbiotic Scorpion Self Proc";
 
         public override string ConfigDescriptionString => "Fixes cases where Symbiotic Scorpion can proc on self damage.";
 

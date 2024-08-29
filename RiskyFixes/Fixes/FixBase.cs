@@ -27,7 +27,7 @@ namespace RiskyFixes.Fixes
 
         public abstract bool StopLoadOnConfigDisable { get; } //Intended for RiskOfOptions compat if it becomes a thing
 
-        protected void ReadConfig(ConfigFile config)
+        protected virtual void ReadConfig(ConfigFile config)
         {
             Enabled = config.Bind<bool>(ConfigCategoryString, ConfigOptionName, true, ConfigDescriptionString);
         }

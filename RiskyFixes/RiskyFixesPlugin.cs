@@ -3,6 +3,7 @@ using System.Reflection;
 using System;
 using System.Linq;
 using RiskyFixes.Fixes;
+using R2API.Utils;
 
 namespace RiskyFixes
 {
@@ -13,7 +14,8 @@ namespace RiskyFixes
     [BepInDependency("com.TPDespair.ZetArtifacts", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(R2API.R2API.PluginGUID)]
 
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.0.0")]
+    [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.0.1")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()

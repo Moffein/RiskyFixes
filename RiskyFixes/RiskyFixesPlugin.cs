@@ -28,9 +28,9 @@ namespace RiskyFixes
         {
             var fixTypes = Assembly.GetExecutingAssembly().GetTypes().Where(type => !type.IsAbstract && type.IsSubclassOf(typeof(FixBase)));
 
-            foreach (var artifactType in fixTypes)
+            foreach (var fixType in fixTypes)
             {
-                FixBase fix = (FixBase)Activator.CreateInstance(artifactType);
+                FixBase fix = (FixBase)Activator.CreateInstance(fixType);
                 fix.Init(Config);
             }
         }

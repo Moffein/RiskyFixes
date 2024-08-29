@@ -11,6 +11,7 @@ namespace RiskyFixes
     [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("dev.wildbook.multitudes", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.TPDespair.ZetArtifacts", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(R2API.R2API.PluginGUID)]
 
     [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.0.0")]
     public class RiskyFixesPlugin : BaseUnityPlugin

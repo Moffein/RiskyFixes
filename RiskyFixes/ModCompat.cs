@@ -13,6 +13,7 @@ namespace RiskyFixes
             EnigmaBlacklistCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Moffein.EnigmaBlacklist");
             MultitudesCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("dev.wildbook.multitudes");
             ZetArtifactsCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.TPDespair.ZetArtifacts");
+            AIBlacklist.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Moffein.AI_Blacklist");
         }
 
         public static class RiskOfOptionsCompat
@@ -64,6 +65,11 @@ namespace RiskyFixes
                     return 1;
                 }
             }
+        }
+
+        public static class AIBlacklist
+        {
+            public static bool pluginLoaded;
         }
     }
 }

@@ -59,6 +59,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 ## Artifact Fixes
 
 - Enigma now removes all non-Enigma equipments from the drop pool at the start of a run.
+- Vengeance Clones now have the same level as players.
 
 ## Enemy Fixes
 
@@ -76,6 +77,11 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Mithrix (Phase 4)
 	- No longer skippable.
+	
+## Minion Fixes
+
+- Fixed minion AI attempting to retaliate against the player.
+	- Note: This fixes it in normal runs, but also affects Chaos runs where this behavior is intended.
 
 ## Installation
 Place RiskyFixes.dll in /Risk of Rain 2/BepInEx/plugins/

@@ -1,4 +1,4 @@
-This mod compiles a bunch of fixes for Vanilla bugs.
+This mod compiles a bunch of fixes for Vanilla bugs, most of these come from RiskyMod.
 
 Unfortunately, this mod doesn't fix any SotS-specific issues as a lot of the jank is deeply-embedded things that Gearbox should be fixing instead.
 
@@ -11,6 +11,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Bullet Attacks no longer can hit yourself.
 - Disconnected players no longer count towards difficulty scaling.
 - Lower chance of players having hidden names online.
+- Removed main menu advertisement.
 
 ## Item Fixes
 
@@ -18,6 +19,8 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Safer Spaces
 	- Fixed item proccing while already invulnerable.
 	- Fixed item cooldown being calculated as if it has +1 stacks.
+- Symbiotic Scorpion no longer procs on self damage.
+- Voidsent Flame no longer procs on Newt due to the potential for crashes.
 
 ## Survivor Fixes
 	

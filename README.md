@@ -32,6 +32,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Bandit
 	- Primaries now have a shot radius like most other bullet attacks in the game.
+	- Knife hitbox no longer gets cancelled by other animations.
 	
 - Captain
 	- Orbital Skills are now usable in Hidden Realms.

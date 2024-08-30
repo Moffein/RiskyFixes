@@ -55,6 +55,9 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - REX
 	- Fixed nullref on kill with DIRECTIVE: Inject.
 	- Fixed errors related to utility skills. (Needs testing)
+	
+- Seeker
+	- Fixed nullref when using M2.
 
 ## Artifact Fixes
 

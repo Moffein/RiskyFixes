@@ -25,7 +25,7 @@ namespace RiskyFixes.Fixes
 
         public ConfigEntry<bool> Enabled { get; private set; }
 
-        public abstract bool StopLoadOnConfigDisable { get; } //Intended for RiskOfOptions compat if it becomes a thing
+        public virtual bool StopLoadOnConfigDisable => true; //Intended for RiskOfOptions compat if it becomes a thing
 
         protected virtual void ReadConfig(ConfigFile config)
         {

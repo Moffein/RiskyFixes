@@ -12,6 +12,9 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Disconnected players no longer count towards difficulty scaling.
 - Lower chance of players having hidden names online.
 - Removed main menu advertisement.
+- Small holdouts always charge at full speed if 1 player is in the radius.
+	- Affects Moon Escape and Void Fields.
+	- Moon Pillars and Void Signals already have this behavior enabled.
 
 ## Item Fixes
 
@@ -36,6 +39,11 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Captain
 	- Orbital Skills are now usable in Hidden Realms.
+
+- CHEF
+	- Sear
+		- Fixed model being misaligned from your aim direction.
+		- Enabled vertical aiming.
 	
 - Commando
 	- Double Tap no longer has a hidden reload state that lowers the fire rate cap.
@@ -86,6 +94,11 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Fixed minion AI attempting to retaliate against the player.
 	- Note: This fixes it in normal runs, but also affects Chaos runs where this behavior is intended.
+	
+## Stage Fixes
+
+- Commencement
+	- Fixed Void team enemies not being killed at the start of Mithrix's bossfight.
 
 ## Installation
 Place RiskyFixes.dll in /Risk of Rain 2/BepInEx/plugins/

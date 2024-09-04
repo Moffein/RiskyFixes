@@ -36,8 +36,7 @@ namespace RiskyFixes.Fixes.Items
                     if (!hasBuff) return false;
 
                     //Goal is to stop the proc if another invuln condition is active
-                    bool shouldHitProceed = true;
-                    shouldHitProceed = shouldHitProceed && !damageInfo.rejected && !self.godMode;
+                    bool shouldHitProceed = !damageInfo.rejected && !self.godMode;
                     if (self.body)
                     {
                         bool isImmune = self.body.HasBuff(RoR2Content.Buffs.Immune) && !self.body.HasBuff(JunkContent.Buffs.GoldEmpowered);

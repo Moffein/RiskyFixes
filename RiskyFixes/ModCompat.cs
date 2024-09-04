@@ -1,5 +1,6 @@
 ﻿using RoR2;
 using System.Runtime.CompilerServices;
+using Local.Difficulty.Multitudes;
 using TPDespair.ZetArtifacts;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace RiskyFixes
             MultitudesCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("dev.wildbook.multitudes");
             ZetArtifactsCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.TPDespair.ZetArtifacts");
             AIBlacklist.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Moffein.AI_Blacklist");
+            MultitudesDifficultyCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("local.difficulty.multitudes");
         }
 
         public static class RiskOfOptionsCompat
@@ -64,6 +66,27 @@ namespace RiskyFixes
                     }
                     return 1;
                 }
+            }
+        }
+
+        public static class MultitudesDifficultyCompat
+        {
+            public static bool pluginLoaded;
+
+            public static int GetAdditional()
+            {
+                if (!pluginLoaded) return 0;
+                return GetAdditionalInternal();
+            }
+
+            [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
+            private static int GetAdditionalInternal()
+            {
+                if (Setup.forceEnable || Run.instance?.selectedDifficulty == Setup.index)
+                {
+                    return (int) Session.additionalPlayers;
+                }
+                return 0;
             }
         }
 

@@ -60,6 +60,11 @@ namespace RiskyFixes.Fixes.General
             players *= ModCompat.MultitudesCompat.GetMultiplier();
             players *= ModCompat.ZetArtifactsCompat.Multifact.GetMultiplier();
 
+            if (players != 0)
+            {
+                players += ModCompat.MultitudesDifficultyCompat.GetAdditional();
+            }
+
             return players;
         }
     }

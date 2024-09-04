@@ -40,9 +40,12 @@ namespace RiskyFixes.Fixes.Items
                     shouldHitProceed = shouldHitProceed && !damageInfo.rejected && !self.godMode;
                     if (self.body)
                     {
+                        bool isImmune = self.body.HasBuff(RoR2Content.Buffs.Immune) && !self.body.HasBuff(JunkContent.Buffs.GoldEmpowered);
+                        bool isIframe = self.body.HasBuff(RoR2Content.Buffs.HiddenInvincibility) && !damageInfo.damageType.damageType.HasFlag(DamageType.BypassArmor);
+
                         shouldHitProceed = shouldHitProceed
-                        && !self.body.HasBuff(RoR2Content.Buffs.HiddenInvincibility)
-                        && !self.body.HasBuff(RoR2Content.Buffs.Immune);
+                        && !isIframe
+                        && !isImmune;
                     }
                     return shouldHitProceed;
                 });

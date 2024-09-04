@@ -36,17 +36,15 @@ namespace RiskyFixes.Fixes.Items
                     if (!hasBuff) return false;
 
                     //Goal is to stop the proc if another invuln condition is active
-                    bool shouldHitProceed = !damageInfo.rejected && !self.godMode;
+                    bool shouldProcBear = !damageInfo.rejected && !self.godMode;
                     if (self.body)
                     {
                         bool isImmune = self.body.HasBuff(RoR2Content.Buffs.Immune) && !self.body.HasBuff(JunkContent.Buffs.GoldEmpowered);
                         bool isIframe = self.body.HasBuff(RoR2Content.Buffs.HiddenInvincibility) && !damageInfo.damageType.damageType.HasFlag(DamageType.BypassArmor);
 
-                        shouldHitProceed = shouldHitProceed
-                        && !isIframe
-                        && !isImmune;
+                        shouldProcBear = shouldProcBear && !isIframe && !isImmune;
                     }
-                    return shouldHitProceed;
+                    return shouldProcBear;
                 });
             }
             else

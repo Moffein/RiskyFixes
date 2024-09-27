@@ -21,11 +21,11 @@ namespace RiskyFixes.Fixes.Survivors.Merc
 
         protected override void ApplyChanges()
         {
-            IL.EntityStates.Merc.Evis.FixedUpdate += Evis_FixedUpdate;
+            IL.EntityStates.Merc.EvisDash.FixedUpdate += EvisDash_FixedUpdate;
         }
 
         //The goal is to get Eviscerate to ignore allies. The way this is achieved is hacky here.
-        private void Evis_FixedUpdate(ILContext il)
+        private void EvisDash_FixedUpdate(ILContext il)
         {
             ILCursor c = new ILCursor(il);
             if (c.TryGotoNext(MoveType.After,

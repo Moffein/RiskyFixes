@@ -41,8 +41,9 @@ namespace RiskyFixes.Fixes.Items
                     {
                         bool isImmune = self.body.HasBuff(RoR2Content.Buffs.Immune) && !self.body.HasBuff(JunkContent.Buffs.GoldEmpowered);
                         bool isIframe = self.body.HasBuff(RoR2Content.Buffs.HiddenInvincibility) && !damageInfo.damageType.damageType.HasFlag(DamageType.BypassArmor);
+                        bool isSojourn = (damageInfo.damageType & DamageTypeExtended.SojournVehicleDamage) <= 0UL & self.body.HasBuff(DLC2Content.Buffs.SojournVehicle);
 
-                        shouldProcBear = shouldProcBear && !isIframe && !isImmune;
+                        shouldProcBear = shouldProcBear && !isIframe && !isImmune && !isSojourn;
                     }
                     return shouldProcBear;
                 });

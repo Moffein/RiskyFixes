@@ -13,10 +13,11 @@ namespace RiskyFixes
     [BepInDependency("dev.wildbook.multitudes", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.TPDespair.ZetArtifacts", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("local.difficulty.multitudes", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("Gorakh.CherfInheritCrit", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.0.11")]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.1.0")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()

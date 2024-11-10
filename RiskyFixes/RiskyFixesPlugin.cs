@@ -14,6 +14,7 @@ namespace RiskyFixes
     [BepInDependency("com.TPDespair.ZetArtifacts", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("local.difficulty.multitudes", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Gorakh.CherfInheritCrit", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("Gorakh.VagrantOrbFix", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]

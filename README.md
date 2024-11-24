@@ -15,6 +15,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Small holdouts always charge at full speed if 1 player is in the radius.
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
+- Fixed DoT stacks randomly disappearing due to SotS.
 
 ## Item Fixes
 
@@ -24,6 +25,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Fixed item cooldown being calculated as if it has +1 stacks.
 - Symbiotic Scorpion no longer procs on self damage.
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
+- Charged Perforator now inherits crit instead of rerolling.
 
 ## Survivor Fixes
 	
@@ -42,8 +44,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - CHEF
 	- Sear
-		- Fixed model being misaligned from your aim direction.
-		- Enabled vertical aiming.
+		- Enabled vertical aiming and now follows aim direction instead of model direction.
 	
 - Commando
 	- Double Tap no longer has a hidden reload state that lowers the fire rate cap.
@@ -62,7 +63,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Attacks no longer cancel Bungus.
 	
 - REX
-	- Fixed nullref on kill with DIRECTIVE: Inject.
 	- Fixed errors related to utility skills. (Needs testing)
 	
 - Seeker
@@ -79,6 +79,12 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Artifact Reliquary
 	- No longer affected by healing.
+	
+- Scorch Wurm
+	- Fixed nullref on spawn.
+	
+- Wandering Vagrant
+	- Fixed tracking bombs being indestructable.
 
 - Magma Worm
 	- No longer dies to fall damage.
@@ -110,3 +116,7 @@ Place RiskyFixes.dll in /Risk of Rain 2/BepInEx/plugins/
 	- DetectionFix
 	- WormCritFix
 	- Rex Utility Crash Fix
+	
+- Goorahk
+	- Charged Perforator crit inherit fix.
+	- Vagrant Tracking Bomb invulnerability fix.

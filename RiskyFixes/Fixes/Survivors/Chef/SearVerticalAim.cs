@@ -12,7 +12,7 @@ namespace RiskyFixes.Fixes.Survivors.Chef
 
         public override string ConfigOptionName => "(Client-Side) Sear - Vertical Aiming";
 
-        public override string ConfigDescriptionString => "Allow Sear to be aimed vertically.";
+        public override string ConfigDescriptionString => "Allow Sear to be aimed vertically and fixes aim being tied to your model direction.";
 
         protected override void ApplyChanges()
         {

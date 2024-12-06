@@ -43,6 +43,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Orbital Skills are now usable in Hidden Realms.
 
 - CHEF
+	- Added missing Mechanical bodyflag.
 	- Sear
 		- Enabled vertical aiming and now follows aim direction instead of model direction.
 	
@@ -82,6 +83,9 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Scorch Wurm
 	- Fixed nullref on spawn.
+	
+- Halcyonite
+	- Fixed weirdness with the Whirlwind and not being affected by stuns.
 	
 - Wandering Vagrant
 	- Fixed tracking bombs being indestructable.

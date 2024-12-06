@@ -1,7 +1,5 @@
 This mod compiles a bunch of fixes for Vanilla bugs, most of these come from RiskyMod.
 
-Unfortunately, this mod doesn't fix any SotS-specific issues as a lot of the jank is deeply-embedded things that Gearbox should be fixing instead.
-
 Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the config, all tweaks can be toggled!
 
 ## General Fixes
@@ -26,6 +24,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Symbiotic Scorpion no longer procs on self damage.
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
+- Longstanding Solitude no longer causes nullrefs.
 
 ## Survivor Fixes
 	

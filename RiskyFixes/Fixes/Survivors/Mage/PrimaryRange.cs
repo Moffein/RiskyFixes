@@ -27,6 +27,9 @@ namespace RiskyFixes.Fixes.Survivors.Mage
         {
             ProjectileSimple ps = projectile.GetComponent<ProjectileSimple>();
             ps.lifetime = 10f;
+
+            ProjectileImpactExplosion pie = projectile.GetComponent<ProjectileImpactExplosion>();
+            if (pie) pie.lifetime = 10f;
         }
     }
 }

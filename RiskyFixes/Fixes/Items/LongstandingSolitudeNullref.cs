@@ -28,7 +28,6 @@ namespace RiskyFixes.Fixes.Items
                     CharacterBody body = playerCharacterMasterController.master.GetBody();
                     if (body && body.inventory && body.inventory.GetItemCount(DLC2Content.Items.OnLevelUpFreeUnlock) > 0)
                     {
-                        TeamManager.hasLongstandingSolitudeInParty = true;
                         num += body.inventory.GetItemCount(DLC2Content.Items.OnLevelUpFreeUnlock);
                     }
                 }

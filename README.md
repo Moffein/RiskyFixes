@@ -13,7 +13,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Small holdouts always charge at full speed if 1 player is in the radius.
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
-- Fixed DoT stacks randomly disappearing due to SotS.
 
 ## Item Fixes
 
@@ -25,6 +24,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
 - Longstanding Solitude no longer causes nullrefs.
+- Breaching Fin no longer applies its damage bonus multiple times.
 
 ## Survivor Fixes
 	
@@ -64,9 +64,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - REX
 	- Fixed errors related to utility skills. (Needs testing)
-	
-- Seeker
-	- Fixed nullref when using M2.
 
 ## Artifact Fixes
 
@@ -80,9 +77,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Artifact Reliquary
 	- No longer affected by healing.
 	
-- Scorch Wurm
-	- Fixed nullref on spawn.
-	
 - Halcyonite
 	- Fixed weirdness with the Whirlwind and not being affected by stuns.
 	
@@ -91,7 +85,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Magma Worm
 	- No longer dies to fall damage.
-	- Fixed Railgunner headshots not critting.
 	
 - Clay Dunestrider and Grandparent
 	- Ghosts no longer teamkill players.

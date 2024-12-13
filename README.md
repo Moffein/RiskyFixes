@@ -13,6 +13,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Small holdouts always charge at full speed if 1 player is in the radius.
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
+- Fixed multiple Gold Shrines being able to spawn on the same stage.
 
 ## Item Fixes
 
@@ -25,6 +26,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Charged Perforator now inherits crit instead of rerolling.
 - Longstanding Solitude no longer causes nullrefs.
 - Breaching Fin no longer applies its damage bonus multiple times.
+- War Bonds stacks no longer persist between stages.
 
 ## Survivor Fixes
 	

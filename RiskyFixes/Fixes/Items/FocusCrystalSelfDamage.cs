@@ -25,10 +25,10 @@ namespace RiskyFixes.Fixes.Items
         {
             ILCursor c = new ILCursor(il);
             if (c.TryGotoNext(MoveType.After,
-                 x => x.MatchLdsfld(typeof(RoR2Content.Items), "NearbyDamageBonus")
+                 x => x.MatchLdsfld(typeof(RoR2Content.Items), "NearbyDamageBonus"),
+                 x => x.MatchCallvirt<Inventory>("GetItemCount")
                 ))
             {
-                c.Index += 1;
                 c.Emit(OpCodes.Ldarg_0);//victim healthcomponent
                 c.Emit(OpCodes.Ldarg_1);//damageInfo
                 c.EmitDelegate<Func<int, HealthComponent, DamageInfo, int>>((itemCount, self, damageInfo) =>

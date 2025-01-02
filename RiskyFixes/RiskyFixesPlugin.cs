@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using RiskyFixes.Fixes;
 using R2API.Utils;
+using RiskyFixes.Fixes.SharedHooks;
 
 namespace RiskyFixes
 {
@@ -18,13 +19,15 @@ namespace RiskyFixes
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.3.6")]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.3.7")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()
         {
             ModCompat.Init();
             AddToAssembly();
+
+            IL.RoR2.HealthComponent.TakeDamageProcess += ModifyFinalDamage.ModfyFinalDamageHook;
         }
 
         private void AddToAssembly()

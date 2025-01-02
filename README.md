@@ -25,7 +25,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
 - Longstanding Solitude no longer causes nullrefs.
-- Breaching Fin no longer applies its damage bonus multiple times.
+- Breaching Fin no longer reapplies its damage bonus in the same proc chain.
 - War Bonds stacks no longer persist between stages.
 
 ## Survivor Fixes

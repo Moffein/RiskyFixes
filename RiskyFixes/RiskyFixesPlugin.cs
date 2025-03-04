@@ -19,7 +19,7 @@ namespace RiskyFixes
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.3.8")]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.4.0")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()

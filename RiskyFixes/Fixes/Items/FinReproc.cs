@@ -8,6 +8,8 @@ namespace RiskyFixes.Fixes.Items
 {
     public class FinReproc : FixBase<FinReproc>
     {
+        public static float damageBuffPerStack = 0.1f;
+
         public override string ConfigCategoryString => "Items";
 
         public override string ConfigOptionName => "(Server-Side) Breaching Fin - Fix Re-Proc";
@@ -30,7 +32,7 @@ namespace RiskyFixes.Fixes.Items
             int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.KnockUpHitEnemiesJuggleCount);
             if (buffCount > 0)
             {
-                float mult = Mathf.Max(1f, (float)buffCount) * 0.2f;
+                float mult = Mathf.Max(1f, (float)buffCount) * damageBuffPerStack;
                 damageMult.value += mult;
 
                 if (!damageInfo.crit)

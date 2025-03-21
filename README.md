@@ -14,7 +14,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
 - Fixed multiple Gold Shrines being able to spawn on the same stage.
-- DoT stacks no longer expire early due to SotS.
 
 ## Item Fixes
 
@@ -83,9 +82,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Artifact Reliquary
 	- No longer affected by healing.
-	
-- Halcyonite
-	- Fixed weirdness with the Whirlwind and not being affected by stuns.
 	
 - Wandering Vagrant
 	- Fixed tracking bombs being indestructable.

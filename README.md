@@ -67,6 +67,10 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - REX
 	- Fixed errors related to utility skills. (Needs testing)
+	
+- False Son
+	- Laser Burst now rolls for crits.
+	- Step of the Brothers now rolls for crits.
 
 ## Artifact Fixes
 

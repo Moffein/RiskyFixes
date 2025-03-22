@@ -14,6 +14,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
 - Fixed multiple Gold Shrines being able to spawn on the same stage.
+- Fixed TetherVFX nullref.
 
 ## Item Fixes
 
@@ -27,6 +28,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Longstanding Solitude no longer causes nullrefs.
 - Breaching Fin no longer reapplies its damage bonus in the same proc chain.
 - War Bonds stacks no longer persist between stages.
+- Fixed Elusive Antler nullref.
 
 ## Survivor Fixes
 	

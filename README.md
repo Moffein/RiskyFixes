@@ -14,7 +14,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
 - Fixed multiple Gold Shrines being able to spawn on the same stage.
-- Fixed TetherVFX nullref.
 
 ## Item Fixes
 

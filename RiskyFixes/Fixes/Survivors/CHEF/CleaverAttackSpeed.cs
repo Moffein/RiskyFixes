@@ -4,13 +4,13 @@ using System.Text;
 
 namespace RiskyFixes.Fixes.Survivors.CHEF
 {
-    public class CleaverChargeup : FixBase<CleaverChargeup>
+    public class CleaverAttackSpeed : FixBase<CleaverAttackSpeed>
     {
         public override string ConfigCategoryString => "Survivors - CHEF";
 
-        public override string ConfigOptionName => "Dice Chargeup Attack Speed";
+        public override string ConfigOptionName => "Dice Attack Speed";
 
-        public override string ConfigDescriptionString => "Fixes Dice's double damage hold duration not scaling with attack speed.";
+        public override string ConfigDescriptionString => "Fixes various aspects of Dice not scaling with attack speed.";
 
         protected override void ApplyChanges()
         {
@@ -23,6 +23,7 @@ namespace RiskyFixes.Fixes.Survivors.CHEF
             if (self.chefController && self.chefController.characterBody)
             {
                 self.holdChargeTime /= self.chefController.characterBody.attackSpeed;
+                self.minTravelTime /= self.chefController.characterBody.attackSpeed;
             }
         }
     }

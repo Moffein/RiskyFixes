@@ -27,6 +27,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Breaching Fin no longer reapplies its damage bonus in the same proc chain.
 - War Bonds stacks no longer persist between stages.
 - Fixed Elusive Antler nullref.
+- Fixed Longstanding Solitude nullref.
 
 ## Survivor Fixes
 	
@@ -66,7 +67,7 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Palm Blast can now crit.
 	
 - CHEF
-	- Dice hold chargeup now scales with attack speed.
+	- Dice double damage duration and minimum return duration now scale with attack speed.
 
 ## Artifact Fixes
 

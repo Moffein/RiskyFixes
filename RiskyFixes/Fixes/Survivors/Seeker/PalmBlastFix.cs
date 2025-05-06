@@ -4,12 +4,12 @@ using System.Text;
 
 namespace RiskyFixes.Fixes.Survivors.Seeker
 {
-    public class PalmBlastCrit : FixBase<PalmBlastCrit>
+    public class PalmBlastFix : FixBase<PalmBlastFix>
     {
         public override string ConfigCategoryString => "Survivors - Seeker";
 
-        public override string ConfigOptionName => "(Server-Side) Palm Blast Crit";
-        public override string ConfigDescriptionString => "Fixes Palm Blast not rolling for crit.";
+        public override string ConfigOptionName => "(Server-Side) Palm Blast Fixes";
+        public override string ConfigDescriptionString => "Fixes Palm Blast not rolling for crit and not scaling with level.";
 
         protected override void ApplyChanges()
         {
@@ -19,9 +19,10 @@ namespace RiskyFixes.Fixes.Survivors.Seeker
         private void PalmBlastProjectileController_Init(On.PalmBlastProjectileController.orig_Init orig, PalmBlastProjectileController self, RoR2.CharacterBody body)
         {
             orig(self, body);
-            if (self.projectileDamage)
+            if (self.projectileDamage && body)
             {
                 self.projectileDamage.crit = body.RollCrit();
+                self.projectileDamage.damage = body.damage;
             }
         }
     }

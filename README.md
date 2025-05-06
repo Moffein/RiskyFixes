@@ -24,7 +24,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Symbiotic Scorpion no longer procs on self damage.
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
-- Longstanding Solitude no longer causes nullrefs.
 - Breaching Fin no longer reapplies its damage bonus in the same proc chain.
 - War Bonds stacks no longer persist between stages.
 - Fixed Elusive Antler nullref.
@@ -43,11 +42,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Captain
 	- Orbital Skills are now usable in Hidden Realms.
-
-- CHEF
-	- Added missing Mechanical bodyflag.
-	- Sear
-		- Enabled vertical aiming and now follows aim direction instead of model direction.
 	
 - Commando
 	- Double Tap no longer has a hidden reload state that lowers the fire rate cap.
@@ -66,11 +60,13 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Attacks no longer cancel Bungus.
 	
 - REX
-	- Fixed errors related to utility skills. (Needs testing)
+	- Fixed errors related to utility skills.
+
+- Seeker
+	- Palm Blast can now crit.
 	
-- False Son
-	- Laser Burst now rolls for crits.
-	- Step of the Brothers now rolls for crits.
+- CHEF
+	- Dice hold chargeup now scales with attack speed.
 
 ## Artifact Fixes
 
@@ -83,9 +79,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Artifact Reliquary
 	- No longer affected by healing.
-	
-- Wandering Vagrant
-	- Fixed tracking bombs being indestructable.
 
 - Magma Worm
 	- No longer dies to fall damage.
@@ -119,4 +112,3 @@ Place RiskyFixes.dll in /Risk of Rain 2/BepInEx/plugins/
 	
 - Goorahk
 	- Charged Perforator crit inherit fix.
-	- Vagrant Tracking Bomb invulnerability fix.

@@ -24,10 +24,9 @@ namespace RiskyFixes.Fixes.Items
         private void HealthComponent_TakeDamageProcess(MonoMod.Cil.ILContext il)
         {
             ILCursor c = new ILCursor(il);
-            if (c.TryGotoNext(MoveType.After,
-                 x => x.MatchLdsfld(typeof(RoR2Content.Items), "NearbyDamageBonus"),
-                 x => x.MatchCallvirt<Inventory>("GetItemCount")
-                ))
+            if (c.TryGotoNext(
+                 x => x.MatchLdsfld(typeof(RoR2Content.Items), "NearbyDamageBonus"))
+                && c.TryGotoNext(MoveType.After, x => x.MatchCallvirt<Inventory>("GetItemCount")))
             {
                 c.Emit(OpCodes.Ldarg_0);//victim healthcomponent
                 c.Emit(OpCodes.Ldarg_1);//damageInfo

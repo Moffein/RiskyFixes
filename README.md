@@ -62,10 +62,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - REX
 	- Fixed errors related to utility skills.
-
-- Seeker
-	- Palm Blast can now crit.
-	- Palm Blast now scales with level.
 	
 - CHEF
 	- Dice double damage duration and minimum return duration now scale with attack speed.

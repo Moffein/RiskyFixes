@@ -28,7 +28,7 @@ namespace RiskyFixes.Fixes.Enemies.Halcyonite
         {
             GameObject prefab = Addressables.LoadAssetAsync<GameObject>("RoR2/DLC2/ShrineHalcyonite.prefab").WaitForCompletion();
             HalcyoniteShrineInteractable hsi = prefab.GetComponent<HalcyoniteShrineInteractable>();
-            origGoldDrainValue = hsi.goldDrainValue;
+            origGoldDrainValue = Mathf.Max(1, hsi.goldDrainValue);
         }
 
         private void HalcyoniteShrineInteractable_DrainConditionMet(MonoMod.Cil.ILContext il)

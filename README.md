@@ -75,9 +75,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Fixed enemy AI breaking at close range.
 
-- Halcyonite
-	- Fixed Shrine-Spawned Halcyonites having too much stats due to the shrine's gold drain not accounting for time scaling.
-
 - Artifact Reliquary
 	- No longer affected by healing.
 

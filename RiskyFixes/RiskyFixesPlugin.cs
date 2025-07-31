@@ -16,10 +16,11 @@ namespace RiskyFixes
     [BepInDependency("local.difficulty.multitudes", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Gorakh.CherfInheritCrit", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Gorakh.VagrantOrbFix", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("LordVGames.LunarRuinDamageNerf", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.7.1")]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.7.2")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()

@@ -65,6 +65,9 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - CHEF
 	- Dice double damage duration and minimum return duration now scale with attack speed.
+	
+- False Son
+	- Lunar Ruin no longer reapplies its damage bonus in the same proc chain.
 
 ## Artifact Fixes
 

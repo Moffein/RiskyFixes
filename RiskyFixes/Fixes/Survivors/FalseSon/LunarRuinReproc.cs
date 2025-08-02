@@ -24,11 +24,11 @@ namespace RiskyFixes.Fixes.Survivors.FalseSon
                 return;
             }
 
-            IL.RoR2.HealthComponent.TakeDamage += HealthComponent_TakeDamage;
+            IL.RoR2.HealthComponent.TakeDamageProcess += HealthComponent_TakeDamageProcess;
             ModifyFinalDamage.ModifyFinalDamageActions += ModifyDamage;
         }
 
-        private void HealthComponent_TakeDamage(MonoMod.Cil.ILContext il)
+        private void HealthComponent_TakeDamageProcess(MonoMod.Cil.ILContext il)
         {
             ILCursor c = new ILCursor(il);
             if (c.TryGotoNext(MoveType.After, x => x.MatchLdsfld(typeof(DLC2Content.Buffs), "lunarruin")))

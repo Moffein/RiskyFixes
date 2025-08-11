@@ -1,6 +1,6 @@
 ﻿using MonoMod.Cil;
-using RiskyFixes.Fixes.SharedHooks;
 using RoR2;
+using SneedHooks;
 using System;
 using UnityEngine;
 
@@ -19,27 +19,46 @@ namespace RiskyFixes.Fixes.Items
         protected override void ApplyChanges()
         {
             On.RoR2.KnockbackFinUtil.ModifyDamageInfo += KnockbackFinUtil_ModifyDamageInfo;
-            ModifyFinalDamage.ModifyFinalDamageActions += ModifyDamage;
+
+            if (ModCompat.LinearDamageCompat.pluginLoaded)
+            {
+                SneedHooks.ModifyFinalDamage.ModifyFinalDamageActions += ModifyFinalDamage_Additive;
+            }
+            else
+            {
+                SneedHooks.ModifyFinalDamage.ModifyFinalDamageActions += ModifyFinalDamage;
+            }
         }
 
-        private void KnockbackFinUtil_ModifyDamageInfo(On.RoR2.KnockbackFinUtil.orig_ModifyDamageInfo orig, ref DamageInfo damageInfo, CharacterBody attacker, CharacterBody victim)
-        {
-            return;
-        }
-
-        private void ModifyDamage(ModifyFinalDamage.DamageMult damageMult, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
+        private void ModifyFinalDamage(ModifyFinalDamage.DamageModifierArgs damageModifierArgs, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
         {
             int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.KnockUpHitEnemiesJuggleCount);
             if (buffCount > 0)
             {
-                float mult = Mathf.Max(1f, (float)buffCount) * damageBuffPerStack;
-                damageMult.value += mult;
-
+                damageModifierArgs.damageMultFinal *= 1f + Mathf.Max(1, buffCount) * damageBuffPerStack;
                 if (!damageInfo.crit)
                 {
                     damageInfo.damageColorIndex = DamageColorIndex.KnockBackHitEnemies;
                 }
             }
+        }
+
+        private void ModifyFinalDamage_Additive(ModifyFinalDamage.DamageModifierArgs damageModifierArgs, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
+        {
+            int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.KnockUpHitEnemiesJuggleCount);
+            if (buffCount > 0)
+            {
+                damageModifierArgs.damageMultAdd += Mathf.Max(1, buffCount) * damageBuffPerStack;
+                if (!damageInfo.crit)
+                {
+                    damageInfo.damageColorIndex = DamageColorIndex.KnockBackHitEnemies;
+                }
+            }
+        }
+
+        private void KnockbackFinUtil_ModifyDamageInfo(On.RoR2.KnockbackFinUtil.orig_ModifyDamageInfo orig, ref DamageInfo damageInfo, CharacterBody attacker, CharacterBody victim)
+        {
+            return;
         }
     }
 }

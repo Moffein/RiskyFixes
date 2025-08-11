@@ -4,7 +4,6 @@ using System;
 using System.Linq;
 using RiskyFixes.Fixes;
 using R2API.Utils;
-using RiskyFixes.Fixes.SharedHooks;
 
 namespace RiskyFixes
 {
@@ -17,18 +16,18 @@ namespace RiskyFixes
     [BepInDependency("Gorakh.CherfInheritCrit", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("Gorakh.VagrantOrbFix", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("LordVGames.LunarRuinDamageNerf", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.RiskyLives.LinearDamage", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.RiskyLives.SneedHooks")]
     [BepInDependency(R2API.R2API.PluginGUID)]
 
     [NetworkCompatibility(CompatibilityLevel.NoNeedForSync, VersionStrictness.DifferentModVersionsAreOk)]
-    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.7.3")]
+    [BepInPlugin("com.Moffein.RiskyFixes", "RiskyFixes", "1.8.0")]
     public class RiskyFixesPlugin : BaseUnityPlugin
     {
         private void Awake()
         {
             ModCompat.Init();
             AddToAssembly();
-
-            IL.RoR2.HealthComponent.TakeDamageProcess += ModifyFinalDamage.ModfyFinalDamageHook;
         }
 
         private void AddToAssembly()

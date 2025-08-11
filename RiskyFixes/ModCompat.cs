@@ -16,6 +16,12 @@ namespace RiskyFixes
             ZetArtifactsCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.TPDespair.ZetArtifacts");
             AIBlacklist.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Moffein.AI_Blacklist");
             MultitudesDifficultyCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("local.difficulty.multitudes");
+            LinearDamageCompat.pluginLoaded = BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Moffein.LinearDamage");
+        }
+
+        public static class LinearDamageCompat
+        {
+            public static bool pluginLoaded;
         }
 
         public static class RiskOfOptionsCompat

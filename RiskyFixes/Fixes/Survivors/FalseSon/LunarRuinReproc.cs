@@ -2,7 +2,7 @@
 using RoR2;
 using MonoMod.Cil;
 using System;
-using RiskyFixes.Fixes.SharedHooks;
+using SneedHooks;
 
 namespace RiskyFixes.Fixes.Survivors.FalseSon
 {
@@ -25,7 +25,35 @@ namespace RiskyFixes.Fixes.Survivors.FalseSon
             }
 
             IL.RoR2.HealthComponent.TakeDamageProcess += HealthComponent_TakeDamageProcess;
-            ModifyFinalDamage.ModifyFinalDamageActions += ModifyDamage;
+
+            if (ModCompat.LinearDamageCompat.pluginLoaded)
+            {
+                SneedHooks.ModifyFinalDamage.ModifyFinalDamageActions += ModifyFinalDamage_Additive;
+            }
+            else
+            {
+                SneedHooks.ModifyFinalDamage.ModifyFinalDamageActions += ModifyFinalDamage;
+            }
+        }
+
+        private void ModifyFinalDamage(ModifyFinalDamage.DamageModifierArgs damageModifierArgs, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
+        {
+            int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.lunarruin);
+            if (buffCount > 0)
+            {
+                damageModifierArgs.damageMultFinal *= 1f + (damageMultPerBuff * buffCount);
+                damageInfo.damageColorIndex = DamageColorIndex.Void;
+            }
+        }
+
+        private void ModifyFinalDamage_Additive(ModifyFinalDamage.DamageModifierArgs damageModifierArgs, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
+        {
+            int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.lunarruin);
+            if (buffCount > 0)
+            {
+                damageModifierArgs.damageMultAdd += damageMultPerBuff * buffCount;
+                damageInfo.damageColorIndex = DamageColorIndex.Void;
+            }
         }
 
         private void HealthComponent_TakeDamageProcess(MonoMod.Cil.ILContext il)
@@ -38,16 +66,6 @@ namespace RiskyFixes.Fixes.Survivors.FalseSon
             else
             {
                 Debug.LogError("RiskyFixes: LunarRuinReproc IL hook failed.");
-            }
-        }
-
-        private void ModifyDamage(ModifyFinalDamage.DamageMult damageMult, DamageInfo damageInfo, HealthComponent victim, CharacterBody victimBody)
-        {
-            int buffCount = victimBody.GetBuffCount(DLC2Content.Buffs.lunarruin);
-            if (buffCount > 0)
-            {
-                damageMult.value += damageMultPerBuff * buffCount;
-                damageInfo.damageColorIndex = DamageColorIndex.Void;
             }
         }
     }

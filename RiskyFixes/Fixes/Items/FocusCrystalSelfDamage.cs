@@ -26,7 +26,7 @@ namespace RiskyFixes.Fixes.Items
             ILCursor c = new ILCursor(il);
             if (c.TryGotoNext(
                  x => x.MatchLdsfld(typeof(RoR2Content.Items), "NearbyDamageBonus"))
-                && c.TryGotoNext(MoveType.After, x => x.MatchCallvirt<Inventory>("GetItemCount")))
+                && c.TryGotoNext(MoveType.After, x => x.MatchCallvirt<Inventory>("GetItemCountEffective")))
             {
                 c.Emit(OpCodes.Ldarg_0);//victim healthcomponent
                 c.Emit(OpCodes.Ldarg_1);//damageInfo

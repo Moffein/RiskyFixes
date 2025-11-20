@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace RiskyFixes.Fixes.Survivors
+namespace RiskyFixes.Fixes.Survivors.Bandit2
 {
     public class KnifeHitboxCancel : FixBase<KnifeHitboxCancel>
     {

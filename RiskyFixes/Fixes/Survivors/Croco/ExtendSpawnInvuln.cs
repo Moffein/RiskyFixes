@@ -47,6 +47,7 @@ namespace RiskyFixes.Fixes.Survivors.Croco
                 if (NetworkServer.active && self.characterBody && self.characterBody.HasBuff(RoR2Content.Buffs.HiddenInvincibility))
                 {
                     self.characterBody.RemoveBuff(RoR2Content.Buffs.HiddenInvincibility);
+                    self.characterBody.AddTimedBuff(RoR2Content.Buffs.HiddenInvincibility, 0.5f);
                 }
                 orig(self);
             };

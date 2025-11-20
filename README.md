@@ -25,7 +25,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
 - Breaching Fin no longer reapplies its damage bonus in the same proc chain.
-- War Bonds stacks no longer persist between stages.
 - Fixed Elusive Antler nullref.
 - Fixed Longstanding Solitude nullref.
 
@@ -40,9 +39,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Bandit
 	- Primaries now have a shot radius like most other bullet attacks in the game.
 	- Knife hitbox no longer gets cancelled by other animations.
-	
-- Captain
-	- Orbital Skills are now usable in Hidden Realms.
 	
 - Commando
 	- Double Tap no longer has a hidden reload state that lowers the fire rate cap.
@@ -76,8 +72,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 ## Enemy Fixes
 
-- Fixed enemy AI breaking at close range.
-
 - Artifact Reliquary
 	- No longer affected by healing.
 
@@ -89,11 +83,6 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Mithrix (Phase 4)
 	- No longer skippable.
-	
-## Minion Fixes
-
-- Fixed minion AI attempting to retaliate against the player.
-	- Note: This fixes it in normal runs, but also affects Chaos runs where this behavior is intended.
 	
 ## Stage Fixes
 

@@ -84,6 +84,13 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Mithrix (Phase 4)
 	- No longer skippable.
 	
+- Collective Elite icon fixed.
+
+- DLC3 enemy costs increased to be in-line with Vanilla enemies.
+	- Solus Prospector: Spawncost increased from 11 -> 16. Cost ratio reduced from 14.5 -> 10 (Beetle)
+	- Solus Scorcher: Spawncost increased from 18 -> 35. Cost ratio reduced from 9.72 -> 5 (Brass Contraption/Imp)
+	- Solus Distributor: Spawncost increased from 20 -> 52. Cost ratio reduced from 13 -> 5 (Brass Contraption/Imp)
+	
 ## Stage Fixes
 
 - Commencement

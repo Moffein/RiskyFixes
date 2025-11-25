@@ -341,4 +341,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Fixes\Enemies\Solus Heart\" />
+  </ItemGroup>
+
 </Project>

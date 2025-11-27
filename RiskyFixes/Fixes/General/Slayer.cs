@@ -26,7 +26,7 @@ namespace RiskyFixes.Fixes.General
         {
             if ((damageInfo.damageType & DamageType.BonusToLowHealth) == DamageType.BonusToLowHealth)
             {
-                damageInfo.damageType &= ~DamageType.BonusToLowHealth;
+                damageInfo.damageType.damageType &= ~DamageType.BonusToLowHealth;
                 damageInfo.damage *= Mathf.Lerp(3f, 1f, self.combinedHealthFraction);
             }
             orig(self, damageInfo);

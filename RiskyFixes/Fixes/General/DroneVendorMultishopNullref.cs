@@ -9,7 +9,7 @@ namespace RiskyFixes.Fixes.General
     {
         public override string ConfigCategoryString => "General";
 
-        public override string ConfigOptionName => "DroneVendorMultiShopController.OnDestroy Nullref";
+        public override string ConfigOptionName => "(Client-Side) DroneVendorMultiShopController.OnDestroy Nullref";
 
         public override string ConfigDescriptionString => "Fixes this nullref.";
 

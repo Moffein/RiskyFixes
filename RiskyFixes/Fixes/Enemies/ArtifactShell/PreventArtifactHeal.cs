@@ -12,22 +12,14 @@ namespace RiskyFixes.Fixes.Enemies.ArtifactReliquary
 
         public override bool StopLoadOnConfigDisable => true;
 
-        private BodyIndex bodyIndex;
-
         protected override void ApplyChanges()
         {
-            RoR2Application.onLoad += OnLoad;
             On.RoR2.HealthComponent.Heal += HealthComponent_Heal;
-        }
-
-        private void OnLoad()
-        {
-            bodyIndex = BodyCatalog.FindBodyIndex("ArtifactShellBody");
         }
 
         private float HealthComponent_Heal(On.RoR2.HealthComponent.orig_Heal orig, RoR2.HealthComponent self, float amount, RoR2.ProcChainMask procChainMask, bool nonRegen)
         {
-            if (self.body && self.body.bodyIndex == bodyIndex)
+            if (self.body && self.body.bodyIndex == RoR2Content.BodyPrefabs.ArtifactShellBody.bodyIndex)
             {
                 return 0f;
             }

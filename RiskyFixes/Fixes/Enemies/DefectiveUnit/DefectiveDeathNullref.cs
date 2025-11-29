@@ -21,12 +21,12 @@ namespace RiskyFixes.Fixes.Enemies.DefectiveUnit
         private void DeathState_AttemptDeathBehavior(MonoMod.Cil.ILContext il)
         {
             ILCursor c = new ILCursor(il);
-            if (c.TryGotoNext(MoveType.After, x => x.MatchCall<EntityStates.GenericCharacterDeath>("get_cachedModelTransform")))
+            if (c.TryGotoNext(MoveType.After, x => x.MatchLdsfld<EntityStates.DefectiveUnit.DeathState>("deathEffect")))
             {
                 c.Emit(OpCodes.Ldarg_0);
-                c.EmitDelegate<Func<Transform, EntityStates.DefectiveUnit.DeathState, Transform>>((cmt, self) =>
+                c.EmitDelegate<Func<GameObject, EntityStates.DefectiveUnit.DeathState, GameObject>>((effect, self) =>
                 {
-                    return cmt ? cmt : self.transform;
+                    return self.cachedModelTransform ? effect : null;
                 });
             }
             else

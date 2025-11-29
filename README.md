@@ -14,6 +14,8 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Affects Moon Escape and Void Fields.
 	- Moon Pillars and Void Signals already have this behavior enabled.
 - Fixed multiple Gold Shrines being able to spawn on the same stage.
+- Drone Vendor no longer nullrefs on destroy.
+- Fixed a nullref related to TrueKill.
 
 ## Item Fixes
 
@@ -86,15 +88,21 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Collective Elite icon fixed.
 
+- Solus Invalidator death nullref fixed.
+
 - DLC3 enemy costs increased to be in-line with Vanilla enemies.
 	- Solus Prospector: Spawncost increased from 11 -> 16. Cost ratio reduced from 14.5 -> 10 (Beetle)
 	- Solus Scorcher: Spawncost increased from 18 -> 35. Cost ratio reduced from 9.72 -> 5 (Brass Contraption/Imp)
 	- Solus Distributor: Spawncost increased from 20 -> 52. Cost ratio reduced from 13 -> 5 (Brass Contraption/Imp)
+	- Solus Invalidator: Spawncost increased from 40 -> 54. Cost Ratio reduced from 10 -> 7.4 (Lemurian)
 	
 ## Stage Fixes
 
 - Commencement
 	- Fixed Void team enemies not being killed at the start of Mithrix's bossfight.
+	
+- Planeterium
+	- Players are immune during the intro cutscene.
 
 ## Installation
 Place RiskyFixes.dll in /Risk of Rain 2/BepInEx/plugins/

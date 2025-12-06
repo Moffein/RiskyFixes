@@ -32,7 +32,7 @@ namespace RiskyFixes.Fixes.General
                     c.Index--;
                     c.EmitDelegate<Func<CharacterBody, CharacterBody>>(body =>
                     {
-                        return body.healthComponent ? body : null;
+                        return (body && body.healthComponent) ? body : null;
                     });
                 }
             }

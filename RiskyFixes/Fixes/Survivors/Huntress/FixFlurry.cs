@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
 using UnityEngine.Networking;
 
 namespace RiskyFixes.Fixes.Survivors.Huntress
@@ -22,13 +23,17 @@ namespace RiskyFixes.Fixes.Survivors.Huntress
         private void FireSeekingArrow_OnExit(On.EntityStates.Huntress.HuntressWeapon.FireSeekingArrow.orig_OnExit orig, EntityStates.Huntress.HuntressWeapon.FireSeekingArrow self)
         {
             orig(self);
-            if (NetworkServer.active)
+            if (NetworkServer.active && self.childLocator)
             {
-                int remainingArrows = self.maxArrowCount - self.firedArrowCount;
-                for (int i = 0; i < remainingArrows; i++)
+                Transform transform = self.childLocator.FindChild(self.muzzleString);
+                if (transform)
                 {
-                    self.arrowReloadTimer = 0f;
-                    self.FireOrbArrow();
+                    int remainingArrows = self.maxArrowCount - self.firedArrowCount;
+                    for (int i = 0; i < remainingArrows; i++)
+                    {
+                        self.arrowReloadTimer = 0f;
+                        self.FireOrbArrow();
+                    }
                 }
             }
         }

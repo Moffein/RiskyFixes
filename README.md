@@ -40,14 +40,8 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	- Primaries now have a shot radius like most other bullet attacks in the game.
 	- Knife hitbox no longer gets cancelled by other animations.
 	
-- Commando
-	- Double Tap no longer has a hidden reload state that lowers the fire rate cap.
-	
 - Huntress
 	- Flurry no longer loses arrows at high attack speeds.
-	
-- Mercenary
-	- Eviscerate no longer gets stuck on allies.
 	
 - MUL-T
 	- Fixed Nailgun ending burst not triggering when cancelled.
@@ -78,13 +72,16 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 - Magma Worm
 	- No longer dies to fall damage.
 	
-- Clay Dunestrider and Grandparent
+- Clay Dunestrider and Grandparent and Lynx Totem
 	- Ghosts no longer teamkill players.
 	
 - Mithrix (Phase 4)
 	- No longer skippable.
 
 - Solus Invalidator death nullref fixed.
+
+- DLC4 Secret Boss
+	- No longer spoils players when pinged.
 	
 ## Stage Fixes
 

@@ -21,10 +21,8 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 
 - Focus Crystal no longer applies to self damage.
 - Safer Spaces
-	- Fixed item proccing while already invulnerable.
 	- Fixed item cooldown being calculated as if it has +1 stacks.
 - Symbiotic Scorpion no longer procs on self damage.
-- Voidsent Flame no longer procs on Newt due to the potential for crashes.
 - Charged Perforator now inherits crit instead of rerolling.
 - Breaching Fin no longer reapplies its damage bonus in the same proc chain.
 - Fixed Elusive Antler nullref.
@@ -85,16 +83,8 @@ Vanilla-Compatible, some tweaks are client-side, some are server-side. Check the
 	
 - Mithrix (Phase 4)
 	- No longer skippable.
-	
-- Collective Elite icon fixed.
 
 - Solus Invalidator death nullref fixed.
-
-- DLC3 enemy costs increased to be in-line with Vanilla enemies.
-	- Solus Prospector: Spawncost increased from 11 -> 16. Cost ratio reduced from 14.5 -> 10 (Beetle)
-	- Solus Scorcher: Spawncost increased from 18 -> 35. Cost ratio reduced from 9.72 -> 5 (Brass Contraption/Imp)
-	- Solus Distributor: Spawncost increased from 20 -> 52. Cost ratio reduced from 13 -> 5 (Brass Contraption/Imp)
-	- Solus Invalidator: Spawncost increased from 40 -> 54. Cost Ratio reduced from 10 -> 7.4 (Lemurian)
 	
 ## Stage Fixes
 

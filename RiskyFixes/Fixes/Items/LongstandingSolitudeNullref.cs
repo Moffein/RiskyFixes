@@ -26,9 +26,9 @@ namespace RiskyFixes.Fixes.Items
                 if (playerCharacterMasterController && playerCharacterMasterController.master)
                 {
                     CharacterBody body = playerCharacterMasterController.master.GetBody();
-                    if (body && body.inventory && body.inventory.GetItemCount(DLC2Content.Items.OnLevelUpFreeUnlock) > 0)
+                    if (body && body.inventory && body.inventory.GetItemCountEffective(DLC2Content.Items.OnLevelUpFreeUnlock) > 0)
                     {
-                        num += body.inventory.GetItemCount(DLC2Content.Items.OnLevelUpFreeUnlock);
+                        num += body.inventory.GetItemCountEffective(DLC2Content.Items.OnLevelUpFreeUnlock);
                     }
                 }
             }

@@ -27,15 +27,15 @@ namespace RiskyFixes.Fixes.Artifacts
 
         private void RunVengeanceChanges(CharacterMaster self)
         {
-            if (NetworkServer.active && self.inventory && self.inventory.GetItemCount(RoR2Content.Items.InvadingDoppelganger) > 0)
+            if (NetworkServer.active && self.inventory && self.inventory.GetItemCountPermanent(RoR2Content.Items.InvadingDoppelganger) > 0)
             {
-                int alCount = self.inventory.GetItemCount(RoR2Content.Items.UseAmbientLevel);
-                if (alCount > 0) self.inventory.RemoveItem(RoR2Content.Items.UseAmbientLevel, alCount);
+                int alCount = self.inventory.GetItemCountPermanent(RoR2Content.Items.UseAmbientLevel);
+                if (alCount > 0) self.inventory.RemoveItemPermanent(RoR2Content.Items.UseAmbientLevel, alCount);
 
-                int lbCount = self.inventory.GetItemCount(RoR2Content.Items.LevelBonus);
-                if (lbCount > 0) self.inventory.RemoveItem(RoR2Content.Items.LevelBonus, lbCount);
+                int lbCount = self.inventory.GetItemCountPermanent(RoR2Content.Items.LevelBonus);
+                if (lbCount > 0) self.inventory.RemoveItemPermanent(RoR2Content.Items.LevelBonus, lbCount);
 
-                self.inventory.GiveItem(RoR2Content.Items.LevelBonus, (int)TeamManager.instance.GetTeamLevel(TeamIndex.Player) - 1);
+                self.inventory.GiveItemPermanent(RoR2Content.Items.LevelBonus, (int)TeamManager.instance.GetTeamLevel(TeamIndex.Player) - 1);
             }
         }
     }
